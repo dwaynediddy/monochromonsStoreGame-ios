@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-struct secondView: View {
-    var onSave: (Player) -> Void
+struct startingView: View {
     @State private var playerName = ""
-    @State private var isShowingFirstView  = false
+    @State private var isButtonTapped: Bool = false
     
     private var isPlayerNameEmpty: Bool {
             playerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
@@ -24,15 +23,15 @@ struct secondView: View {
                     .padding()
                     .multilineTextAlignment(.center)
                 Button(action: {
-                    let newPlayer = Player(name: playerName)
-                    onSave(newPlayer)
-                    isShowingFirstView = true
+                    isButtonTapped = true
                 }, label: {
-                    Text("enter")
+                    Text("Confirm")
                 })
                 .padding()
                 .disabled(isPlayerNameEmpty)
-                Text("welcome \(playerName)")
+                if isButtonTapped {
+                    NavigationLink("Push to start", destination: welcomeView(name: playerName))
+                }
             }
         }
     }
@@ -40,9 +39,6 @@ struct secondView: View {
 
 struct secondView_Previews: PreviewProvider {
     static var previews: some View {
-        secondView() { player in
-            print("\(player)")
-            
+        startingView()
         }
     }
-}

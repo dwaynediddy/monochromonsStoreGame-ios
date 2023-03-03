@@ -7,14 +7,19 @@
 
 import SwiftUI
 
-struct firstView: View {
+struct welcomeView: View {
+    
+    let name: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Welcome, \(name)!")
     }
 }
 
 struct firstView_Previews: PreviewProvider {
     static var previews: some View {
-        firstView()
+        welcomeView(name: "John")
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }
