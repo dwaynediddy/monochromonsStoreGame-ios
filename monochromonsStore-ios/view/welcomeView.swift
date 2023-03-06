@@ -12,7 +12,23 @@ struct welcomeView: View {
     let name: String
     
     var body: some View {
-        Text("Welcome, \(name)!")
+        VStack {
+            Text("Welcome, \(name)!")
+                .padding(.top, 50)
+                .font(.title)
+            Spacer()
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(width: 350, height: 150)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.black, lineWidth: 2))
+                Text("welcome to the store")
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .padding()
     }
 }
 

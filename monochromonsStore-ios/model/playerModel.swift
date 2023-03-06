@@ -10,7 +10,3 @@ import Combine
 struct Player {
     let name: String
 }
-
-class NewPlayersModel: ObservableObject {
-    @Published var players: [Player] = []
-}
