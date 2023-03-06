@@ -11,8 +11,14 @@ struct welcomeView: View {
     
     let name: String
     @State private var text: String = ""
+    @State private var currentIndex: Int = 0
     
-    let finalText: String = "welcome to the store I am Monochromon, I own this store. I heard you want to earn some cash and prove you got salesman skills! sure thing"
+    let finalText:[String] = [
+        "I am Monochromon, welcome to my store, I heard you want to earn some cash and prove you got salesman skills! sure thing",
+        "when a customer comes in you can chose to sell the item for Higher, normal or lower price. your aim is to make as much cash as you can",
+        "but be careful and take note at a customers mood, they wont haggle for ever and you may miss the sale all together!",
+        "So if you think you got what it takes lets begin!"
+    ]
     
     
     var body: some View {
@@ -38,7 +44,8 @@ struct welcomeView: View {
                 HStack {
                     Spacer()
                     Button("Next") {
-//                        typewriter()
+                        typewritter(for: finalText, at: currentIndex)
+                        currentIndex += 1
                     }
 
                     .padding(.trailing, 20)
@@ -49,19 +56,20 @@ struct welcomeView: View {
         .navigationBarBackButtonHidden(true)
         .padding()
         .onAppear {
-            typewriter()
+            typewritter(for: finalText, at: currentIndex)
+            currentIndex += 1
         }
     }
     
     
-    func typewriter(at position: Int = 0) {
+    func typewritter(for strings: [String], at index: Int, position: Int = 0) {
         if position == 0 {
             text = ""
         }
-        if position < finalText.count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                text.append(finalText[position])
-                typewriter(at: position + 1)
+        if position < strings[index].count {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                text.append(strings[index][position])
+                typewritter(for: strings, at: index,position: position + 1)
             }
         }
     }
