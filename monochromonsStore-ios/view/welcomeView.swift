@@ -38,7 +38,7 @@ struct welcomeView: View {
                 HStack {
                     Spacer()
                     Button("Next") {
-                        typewriter()
+//                        typewriter()
                     }
 
                     .padding(.trailing, 20)
@@ -48,6 +48,9 @@ struct welcomeView: View {
         }
         .navigationBarBackButtonHidden(true)
         .padding()
+        .onAppear {
+            typewriter()
+        }
     }
     
     
