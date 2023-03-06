@@ -12,10 +12,12 @@ struct welcomeView: View {
     let name: String
     @State private var text: String = ""
     @State private var currentIndex: Int = 0
+    @State private var isDone : Bool = true
+    @State private var isTypingPaused: Bool = false
     
     let finalText:[String] = [
         "I am Monochromon, welcome to my store, I heard you want to earn some cash and prove you got salesman skills! sure thing",
-        "when a customer comes in you can chose to sell the item for Higher, normal or lower price. your aim is to make as much cash as you can",
+        "When a customer comes in you can chose to sell the item for Higher, normal or lower price. your aim is to make as much cash as you can",
         "but be careful and take note at a customers mood, they wont haggle for ever and you may miss the sale all together!",
         "So if you think you got what it takes lets begin!"
     ]
@@ -31,6 +33,9 @@ struct welcomeView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             Spacer()
+            if isDone {
+                NavigationLink("Push to start", destination: pickAvatarView())
+            }
             ZStack {
                 Rectangle()
                     .foregroundColor(.white)
@@ -43,33 +48,43 @@ struct welcomeView: View {
                     .padding(10)
                 HStack {
                     Spacer()
-                    Button("Next") {
-                        typewritter(for: finalText, at: currentIndex)
-                        currentIndex += 1
-                    }
-
+                    
+                    Button(action: {
+                        if finalText.indices.contains(currentIndex) {
+                            isTypingPaused = true
+                            isDone = true
+                            typewritter(for: finalText[currentIndex], at: 0)
+                            currentIndex += 1
+                        }}, label: {
+                            Text("Next")
+                        })
                     .padding(.trailing, 20)
                     .padding(.top, 80)
                 }
             }
-        }
-        .navigationBarBackButtonHidden(true)
-        .padding()
-        .onAppear {
-            typewritter(for: finalText, at: currentIndex)
-            currentIndex += 1
+            .navigationBarBackButtonHidden(true)
+            .padding()
+            .onAppear {
+                if finalText.indices.contains(currentIndex) {
+                    typewritter(for: finalText[currentIndex], at: 0)
+                    currentIndex += 1
+                }
+            }
         }
     }
     
-    
-    func typewritter(for strings: [String], at index: Int, position: Int = 0) {
+    func typewritter(for string: String, at position: Int) {
         if position == 0 {
             text = ""
         }
-        if position < strings[index].count {
+        if position < string.count {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
-                text.append(strings[index][position])
-                typewritter(for: strings, at: index,position: position + 1)
+                if !isTypingPaused {
+                    text.append(string[string.index(string.startIndex, offsetBy: position)])
+                    typewritter(for: string, at: position + 1)
+                } else {
+                    isTypingPaused = false
+                }
             }
         }
     }
