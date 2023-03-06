@@ -10,13 +10,17 @@ import SwiftUI
 struct welcomeView: View {
     
     let name: String
-    @State private var typedText: String = "welcome to the store I am Monochromon, I own this store. I heard you want to earn some cash and prove you got salesman skills! sure thing"
+    @State private var text: String = ""
+    
+    let finalText: String = "welcome to the store I am Monochromon, I own this store. I heard you want to earn some cash and prove you got salesman skills! sure thing"
+    
     
     var body: some View {
         VStack {
             Text("Welcome, \(name)!")
                 .padding(.top, 50)
                 .font(.title)
+            Spacer()
             Image("monochromon")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -28,32 +32,48 @@ struct welcomeView: View {
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.black, lineWidth: 2))
-                Text(typedText)
+                Text(text)
                     .font(.body)
-                Button ("Next") {
-                    // go to next dialogue screen
+                    .padding(10)
+                HStack {
+                    Spacer()
+                    Button("Next") {
+                        typewriter()
+                    }
+
+                    .padding(.trailing, 20)
+                    .padding(.top, 80)
                 }
             }
         }
         .navigationBarBackButtonHidden(true)
         .padding()
-//        .onAppear{
-//            let timer = Timer.publish(every: 0.1, on: .main, in: .common)
-//            let publisher = timer.autoconnect()
-//            let characters = Array("Welcome to the store")
-//            _ = publisher
-//                .zip(characters.publisher)
-//                .map { $0.1 }
-//                .sink(receiveValue: { self.typedText += $0 })
-//
-//        }
+    }
+    
+    
+    func typewriter(at position: Int = 0) {
+        if position == 0 {
+            text = ""
+        }
+        if position < finalText.count {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                text.append(finalText[position])
+                typewriter(at: position + 1)
+            }
+        }
     }
 }
 
 struct firstView_Previews: PreviewProvider {
     static var previews: some View {
-        welcomeView(name: "John")
+        welcomeView(name: "test name")
             .previewLayout(.sizeThatFits)
             .padding()
+    }
+}
+
+extension String {
+    subscript(offset: Int) -> Character {
+        self[index(startIndex, offsetBy: offset)]
     }
 }
