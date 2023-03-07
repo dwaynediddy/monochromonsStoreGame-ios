@@ -12,9 +12,9 @@
 		15DD67D129AF4C7700129736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD67D029AF4C7700129736 /* Assets.xcassets */; };
 		15DD67D429AF4C7700129736 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD67D329AF4C7700129736 /* Preview Assets.xcassets */; };
 		15DD67DD29AF4C9D00129736 /* playerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67DC29AF4C9D00129736 /* playerModel.swift */; };
-		15DD67E729AFE9A900129736 /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67E629AFE9A900129736 /* welcomeView.swift */; };
-		15DD67E929AFE9B500129736 /* startingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67E829AFE9B500129736 /* startingview.swift */; };
-		15DD67EF29B651E900129736 /* pickAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67EE29B651E900129736 /* pickAvatarView.swift */; };
+		15DD67E729AFE9A900129736 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67E629AFE9A900129736 /* WelcomeView.swift */; };
+		15DD67E929AFE9B500129736 /* Startingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67E829AFE9B500129736 /* Startingview.swift */; };
+		15DD67EF29B651E900129736 /* PickAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67EE29B651E900129736 /* PickAvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +24,9 @@
 		15DD67D029AF4C7700129736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15DD67D329AF4C7700129736 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15DD67DC29AF4C9D00129736 /* playerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerModel.swift; sourceTree = "<group>"; };
-		15DD67E629AFE9A900129736 /* welcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeView.swift; sourceTree = "<group>"; };
-		15DD67E829AFE9B500129736 /* startingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startingview.swift; sourceTree = "<group>"; };
-		15DD67EE29B651E900129736 /* pickAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickAvatarView.swift; sourceTree = "<group>"; };
+		15DD67E629AFE9A900129736 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		15DD67E829AFE9B500129736 /* Startingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startingview.swift; sourceTree = "<group>"; };
+		15DD67EE29B651E900129736 /* PickAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +88,9 @@
 		15DD67DB29AF4C8300129736 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				15DD67E629AFE9A900129736 /* welcomeView.swift */,
-				15DD67E829AFE9B500129736 /* startingview.swift */,
-				15DD67EE29B651E900129736 /* pickAvatarView.swift */,
+				15DD67E629AFE9A900129736 /* WelcomeView.swift */,
+				15DD67E829AFE9B500129736 /* Startingview.swift */,
+				15DD67EE29B651E900129736 /* PickAvatarView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -166,9 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15DD67CF29AF4C7500129736 /* ContentView.swift in Sources */,
-				15DD67EF29B651E900129736 /* pickAvatarView.swift in Sources */,
-				15DD67E929AFE9B500129736 /* startingview.swift in Sources */,
-				15DD67E729AFE9A900129736 /* welcomeView.swift in Sources */,
+				15DD67EF29B651E900129736 /* PickAvatarView.swift in Sources */,
+				15DD67E929AFE9B500129736 /* Startingview.swift in Sources */,
+				15DD67E729AFE9A900129736 /* WelcomeView.swift in Sources */,
 				15DD67DD29AF4C9D00129736 /* playerModel.swift in Sources */,
 				15DD67CD29AF4C7500129736 /* monochromonsStore_iosApp.swift in Sources */,
 			);
