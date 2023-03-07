@@ -21,13 +21,16 @@ struct PickAvatarView: View {
                         .aspectRatio(contentMode: .fit)
                 }
             }
+            .tabViewStyle(PageTabViewStyle())
             Button(action : {
                 
             }, label: {
                 Text("Select")
                 
             })
+            .padding()
         }
+        .background(.gray)
     }
 }
 
