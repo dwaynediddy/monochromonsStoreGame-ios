@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct PickAvatarView: View {
+    let images:[String] = ["gabumon", "agumon", "petamon", "polomon", "biromon"]
+    
     var body: some View {
         VStack {
             Text("Select your avatar")
                 .font(.title)
-            Image("gabumon")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            TabView {
+                ForEach(0..<5) { i in
+                    Image("\(images[i])")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+            }
             Button(action : {
                 
             }, label: {
