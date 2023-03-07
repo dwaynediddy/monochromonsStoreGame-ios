@@ -8,29 +8,31 @@
 import SwiftUI
 
 struct PickAvatarView: View {
-    let images:[String] = ["gabumon", "agumon", "petamon", "polomon", "biromon"]
+    @ObservedObject var avatarModel = AvatarModel()
+    @State private var selectedAvatar: Avatar?
     
     var body: some View {
         VStack {
             Text("Select your avatar")
                 .font(.title)
             TabView {
-                ForEach(0..<5) { i in
-                    Image("\(images[i])")
+                ForEach(avatarModel.avatars, id: \.name) { avatar in
+                    Image("\(avatar.image)")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            Button(action : {
-                
-            }, label: {
-                Text("Select")
-                
-            })
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            Button(action: {
+                           
+                }, label: {
+                    Text(selectedAvatar != nil ? "Select \(selectedAvatar!.name)" : "Select an avatar")
+                        .font(.system(.title2))
+                })
             .padding()
         }
-        .background(.gray)
+//        .background(.gray)
     }
 }
 
