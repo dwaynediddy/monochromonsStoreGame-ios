@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+struct AvatarButton: View {
+    let avatar: Avatar
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            VStack {
+                Image("\(avatar.image)")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("Select \(avatar.name)")
+                    .font(.system(.title2))
+                    .padding()
+            }
+        }
+    }
+}
+
 struct PickAvatarView: View {
     @ObservedObject var avatarModel = PickAvatarViewModel()
     
@@ -16,32 +34,18 @@ struct PickAvatarView: View {
                 .font(.title)
             TabView {
                 ForEach(avatarModel.avatars, id: \.name) { avatar in
-                Button(action: {
-                    avatarModel.selectAvatar(avatar)
-                    print(avatar)
-                }) {
-                    VStack {
-                        Image("\(avatar.image)")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            
-                        Button(action: {
-                            avatarModel.selectAvatar(avatar)
-                            print(avatar)
-                        }, label: {
-                            Text("Select \(avatar.name)")
-                                .font(.system(.title2))
-                        })
-                        .padding(.top, 20)
-                    }
+                    AvatarButton(avatar: avatar, action: {
+                        avatarModel.selectAvatar(avatar)
+                        avatarModel.saveSelectedAvatar()
+                        print(avatarModel.saveSelectedAvatar(), "avatar is saved")
+                    })
                 }
             }
-            }
-            .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         }
-//        .background(.gray)
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
+    //        .background(.gray)
 }
 
 struct PickAvatarView_Previews: PreviewProvider {
