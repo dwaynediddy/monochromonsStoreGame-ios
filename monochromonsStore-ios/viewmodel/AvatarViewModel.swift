@@ -22,5 +22,14 @@ class PickAvatarViewModel: ObservableObject {
     }
     func selectAvatar(_ avatar: Avatar) {
         self.selectedAvatar = avatar
+        saveSelectedAvatar()
     }
+    
+    func saveSelectedAvatar() {
+        guard let selectAvatar = selectedAvatar else {
+            return
+        }
+        UserDefaults.standard.set(selectAvatar.name, forKey: "selectedAvatarName")
+    }
+    
 }
