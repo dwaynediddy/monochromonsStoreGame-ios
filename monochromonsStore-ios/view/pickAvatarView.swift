@@ -17,20 +17,27 @@ struct PickAvatarView: View {
                 .font(.title)
             TabView {
                 ForEach(avatarModel.avatars, id: \.name) { avatar in
-                    Image("\(avatar.image)")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                Button(action: {
+                    self.selectedAvatar = avatar
+                }) {
+                    VStack {
+                        Image("\(avatar.image)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        //                    Text("\(avatar.name)")
+                        Button(action: {
+                            // save avatar and send to next page
+                        }, label: {
+                            Text("Select \(avatar.name)")
+                                .font(.system(.title2))
+                        })
+                        .padding()
+                    }
                 }
+            }
             }
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            Button(action: {
-                           
-                }, label: {
-                    Text(selectedAvatar != nil ? "Select \(selectedAvatar!.name)" : "Select an avatar")
-                        .font(.system(.title2))
-                })
-            .padding()
         }
 //        .background(.gray)
     }
