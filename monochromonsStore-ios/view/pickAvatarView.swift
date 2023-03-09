@@ -7,24 +7,6 @@
 
 import SwiftUI
 
-struct AvatarButton: View {
-    let avatar: Avatar
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            VStack {
-                Image("\(avatar.image)")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Text("Select \(avatar.name)")
-                    .font(.system(.title2))
-                    .padding()
-            }
-        }
-    }
-}
-
 struct PickAvatarView: View {
     @ObservedObject var avatarModel = PickAvatarViewModel()
     

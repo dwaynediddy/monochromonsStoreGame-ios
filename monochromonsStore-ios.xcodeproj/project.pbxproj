@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15537FEA29BA142700EF7F4E /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15537FE929BA142700EF7F4E /* AvatarButton.swift */; };
 		15B2B02929B75C5000E46572 /* avatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02829B75C5000E46572 /* avatarModel.swift */; };
 		15B2B02C29B9FC7F00E46572 /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02B29B9FC7F00E46572 /* AvatarViewModel.swift */; };
+		15B2B02E29BA0ECB00E46572 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02D29BA0ECB00E46572 /* TestView.swift */; };
 		15DD67CD29AF4C7500129736 /* monochromonsStore_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67CC29AF4C7500129736 /* monochromonsStore_iosApp.swift */; };
 		15DD67CF29AF4C7500129736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67CE29AF4C7500129736 /* ContentView.swift */; };
 		15DD67D129AF4C7700129736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD67D029AF4C7700129736 /* Assets.xcassets */; };
@@ -20,8 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15537FE929BA142700EF7F4E /* AvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
 		15B2B02829B75C5000E46572 /* avatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarModel.swift; sourceTree = "<group>"; };
 		15B2B02B29B9FC7F00E46572 /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
+		15B2B02D29BA0ECB00E46572 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		15DD67C929AF4C7500129736 /* monochromonsStore-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "monochromonsStore-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD67CC29AF4C7500129736 /* monochromonsStore_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monochromonsStore_iosApp.swift; sourceTree = "<group>"; };
 		15DD67CE29AF4C7500129736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				15DD67E629AFE9A900129736 /* WelcomeView.swift */,
 				15DD67E829AFE9B500129736 /* Startingview.swift */,
 				15DD67EE29B651E900129736 /* PickAvatarView.swift */,
+				15B2B02D29BA0ECB00E46572 /* TestView.swift */,
+				15537FE929BA142700EF7F4E /* AvatarButton.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -179,12 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15537FEA29BA142700EF7F4E /* AvatarButton.swift in Sources */,
 				15DD67CF29AF4C7500129736 /* ContentView.swift in Sources */,
 				15DD67EF29B651E900129736 /* PickAvatarView.swift in Sources */,
 				15DD67E929AFE9B500129736 /* Startingview.swift in Sources */,
 				15B2B02C29B9FC7F00E46572 /* AvatarViewModel.swift in Sources */,
 				15DD67E729AFE9A900129736 /* WelcomeView.swift in Sources */,
 				15DD67DD29AF4C9D00129736 /* playerModel.swift in Sources */,
+				15B2B02E29BA0ECB00E46572 /* TestView.swift in Sources */,
 				15B2B02929B75C5000E46572 /* avatarModel.swift in Sources */,
 				15DD67CD29AF4C7500129736 /* monochromonsStore_iosApp.swift in Sources */,
 			);
