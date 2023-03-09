@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct PickAvatarView: View {
-    @ObservedObject var avatarModel = AvatarModel()
-    @State private var selectedAvatar: Avatar?
+    @ObservedObject var avatarModel = PickAvatarViewModel()
     
     var body: some View {
         VStack {
@@ -18,20 +17,22 @@ struct PickAvatarView: View {
             TabView {
                 ForEach(avatarModel.avatars, id: \.name) { avatar in
                 Button(action: {
-                    self.selectedAvatar = avatar
+                    avatarModel.selectAvatar(avatar)
+                    print(avatar)
                 }) {
                     VStack {
                         Image("\(avatar.image)")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                        //                    Text("\(avatar.name)")
+                            
                         Button(action: {
-                            // save avatar and send to next page
+                            avatarModel.selectAvatar(avatar)
+                            print(avatar)
                         }, label: {
                             Text("Select \(avatar.name)")
                                 .font(.system(.title2))
                         })
-                        .padding()
+                        .padding(.top, 20)
                     }
                 }
             }
