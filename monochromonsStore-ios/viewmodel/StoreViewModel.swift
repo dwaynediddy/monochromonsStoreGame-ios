@@ -27,9 +27,9 @@ class CustomerModel: ObservableObject {
 //Items = [
 //    kepacCoffee=50gold
 //    sneakers=150gold
-//    AirPods    = 300gold
+//    AirPods = 300gold
 //
-//Low    & false = 10%
+//Low & false = 10%
 //Low & true = 13%
 //
 //Med & false = 12%

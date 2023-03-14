@@ -9,7 +9,27 @@ import SwiftUI
 
 struct StoreView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Image("agumon")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                Image("monochromon")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+            }
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(width: 350, height: 150)
+                    .cornerRadius(10)
+                    .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.black, lineWidth: 2))
+                    Text("text")
+            }
+            .padding()
+        }
     }
 }
 
