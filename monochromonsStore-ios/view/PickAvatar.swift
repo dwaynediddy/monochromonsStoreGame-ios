@@ -1,8 +1,8 @@
 //
-//  pickAvatar.swift
+//  PickAvatar.swift
 //  monochromonsStore-ios
 //
-//  Created by Dwayne on 6/3/2023.
+//  Created by Dwayne on 14/3/2023.
 //
 
 import SwiftUI

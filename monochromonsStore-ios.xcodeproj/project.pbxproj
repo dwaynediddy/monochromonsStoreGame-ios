@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151C842F29C0CB3B00F1581F /* PickAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C842E29C0CB3B00F1581F /* PickAvatar.swift */; };
 		15537FEA29BA142700EF7F4E /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15537FE929BA142700EF7F4E /* AvatarButton.swift */; };
 		15B2B02929B75C5000E46572 /* avatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02829B75C5000E46572 /* avatarModel.swift */; };
 		15B2B02C29B9FC7F00E46572 /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02B29B9FC7F00E46572 /* AvatarViewModel.swift */; };
 		15B2B02E29BA0ECB00E46572 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02D29BA0ECB00E46572 /* TestView.swift */; };
+		15C1882A29C0C34000EACAA7 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C1882929C0C34000EACAA7 /* StoreView.swift */; };
+		15C1882C29C0C3E000EACAA7 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C1882B29C0C3E000EACAA7 /* StoreViewModel.swift */; };
 		15DD67CD29AF4C7500129736 /* monochromonsStore_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67CC29AF4C7500129736 /* monochromonsStore_iosApp.swift */; };
 		15DD67CF29AF4C7500129736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67CE29AF4C7500129736 /* ContentView.swift */; };
 		15DD67D129AF4C7700129736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD67D029AF4C7700129736 /* Assets.xcassets */; };
@@ -18,14 +21,16 @@
 		15DD67DD29AF4C9D00129736 /* playerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67DC29AF4C9D00129736 /* playerModel.swift */; };
 		15DD67E729AFE9A900129736 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67E629AFE9A900129736 /* WelcomeView.swift */; };
 		15DD67E929AFE9B500129736 /* Startingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67E829AFE9B500129736 /* Startingview.swift */; };
-		15DD67EF29B651E900129736 /* PickAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DD67EE29B651E900129736 /* PickAvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151C842E29C0CB3B00F1581F /* PickAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAvatar.swift; sourceTree = "<group>"; };
 		15537FE929BA142700EF7F4E /* AvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
 		15B2B02829B75C5000E46572 /* avatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarModel.swift; sourceTree = "<group>"; };
 		15B2B02B29B9FC7F00E46572 /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
 		15B2B02D29BA0ECB00E46572 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		15C1882929C0C34000EACAA7 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		15C1882B29C0C3E000EACAA7 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		15DD67C929AF4C7500129736 /* monochromonsStore-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "monochromonsStore-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD67CC29AF4C7500129736 /* monochromonsStore_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monochromonsStore_iosApp.swift; sourceTree = "<group>"; };
 		15DD67CE29AF4C7500129736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		15DD67DC29AF4C9D00129736 /* playerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerModel.swift; sourceTree = "<group>"; };
 		15DD67E629AFE9A900129736 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		15DD67E829AFE9B500129736 /* Startingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startingview.swift; sourceTree = "<group>"; };
-		15DD67EE29B651E900129736 /* PickAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				15B2B02B29B9FC7F00E46572 /* AvatarViewModel.swift */,
+				15C1882B29C0C3E000EACAA7 /* StoreViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -108,9 +113,10 @@
 			children = (
 				15DD67E629AFE9A900129736 /* WelcomeView.swift */,
 				15DD67E829AFE9B500129736 /* Startingview.swift */,
-				15DD67EE29B651E900129736 /* PickAvatarView.swift */,
 				15B2B02D29BA0ECB00E46572 /* TestView.swift */,
 				15537FE929BA142700EF7F4E /* AvatarButton.swift */,
+				15C1882929C0C34000EACAA7 /* StoreView.swift */,
+				151C842E29C0CB3B00F1581F /* PickAvatar.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -186,13 +192,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				15537FEA29BA142700EF7F4E /* AvatarButton.swift in Sources */,
+				15C1882C29C0C3E000EACAA7 /* StoreViewModel.swift in Sources */,
 				15DD67CF29AF4C7500129736 /* ContentView.swift in Sources */,
-				15DD67EF29B651E900129736 /* PickAvatarView.swift in Sources */,
+				15C1882A29C0C34000EACAA7 /* StoreView.swift in Sources */,
 				15DD67E929AFE9B500129736 /* Startingview.swift in Sources */,
 				15B2B02C29B9FC7F00E46572 /* AvatarViewModel.swift in Sources */,
 				15DD67E729AFE9A900129736 /* WelcomeView.swift in Sources */,
 				15DD67DD29AF4C9D00129736 /* playerModel.swift in Sources */,
 				15B2B02E29BA0ECB00E46572 /* TestView.swift in Sources */,
+				151C842F29C0CB3B00F1581F /* PickAvatar.swift in Sources */,
 				15B2B02929B75C5000E46572 /* avatarModel.swift in Sources */,
 				15DD67CD29AF4C7500129736 /* monochromonsStore_iosApp.swift in Sources */,
 			);
