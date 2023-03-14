@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct Avatar {
+    let name: String
+    let image: String
+}
+
 class PickAvatarViewModel: ObservableObject {
     @Published var avatars: [Avatar] = []
     @Published var selectedAvatar: Avatar?

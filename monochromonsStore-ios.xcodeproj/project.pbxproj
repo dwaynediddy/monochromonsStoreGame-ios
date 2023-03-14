@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		151C842F29C0CB3B00F1581F /* PickAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C842E29C0CB3B00F1581F /* PickAvatar.swift */; };
 		15537FEA29BA142700EF7F4E /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15537FE929BA142700EF7F4E /* AvatarButton.swift */; };
-		15B2B02929B75C5000E46572 /* avatarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02829B75C5000E46572 /* avatarModel.swift */; };
 		15B2B02C29B9FC7F00E46572 /* AvatarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02B29B9FC7F00E46572 /* AvatarViewModel.swift */; };
 		15B2B02E29BA0ECB00E46572 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2B02D29BA0ECB00E46572 /* TestView.swift */; };
 		15C1882A29C0C34000EACAA7 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C1882929C0C34000EACAA7 /* StoreView.swift */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		151C842E29C0CB3B00F1581F /* PickAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickAvatar.swift; sourceTree = "<group>"; };
 		15537FE929BA142700EF7F4E /* AvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
-		15B2B02829B75C5000E46572 /* avatarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarModel.swift; sourceTree = "<group>"; };
 		15B2B02B29B9FC7F00E46572 /* AvatarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewModel.swift; sourceTree = "<group>"; };
 		15B2B02D29BA0ECB00E46572 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		15C1882929C0C34000EACAA7 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				15DD67DC29AF4C9D00129736 /* playerModel.swift */,
-				15B2B02829B75C5000E46572 /* avatarModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -201,7 +198,6 @@
 				15DD67DD29AF4C9D00129736 /* playerModel.swift in Sources */,
 				15B2B02E29BA0ECB00E46572 /* TestView.swift in Sources */,
 				151C842F29C0CB3B00F1581F /* PickAvatar.swift in Sources */,
-				15B2B02929B75C5000E46572 /* avatarModel.swift in Sources */,
 				15DD67CD29AF4C7500129736 /* monochromonsStore_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
